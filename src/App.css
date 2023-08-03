@@ -1,0 +1,226 @@
+.app {
+  height: 100vh;
+  background-color: rgb(32, 4, 59);
+  display: flex;
+  color: white;
+
+}
+
+.main {
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(32, 4, 59)), url("./assets/img2.jpg") center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.trivia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question {
+  width: 80%;
+  border: 3px solid black;
+  background: linear-gradient(black, rgb(7, 22, 233));
+  font-size: 20px;
+  height: 20px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px;
+}
+
+.answers {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 20px;
+
+
+
+}
+
+.answer {
+  width: 40%;
+  text-align: center;
+  border: 1px solid blue;
+  background: linear-gradient(rgb(51, 52, 71), rgb(174, 0, 255));
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 15px;
+  margin: 0px 10px 20px 10px;
+  cursor: pointer;
+
+}
+
+.timer {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 5px solid rgb(255, 255, 254);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+}
+
+.answer:hover,
+.answer.active {
+  background: rgb(65, 131, 63);
+}
+ 
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(rgb(51, 52, 71), rgb(174, 0, 255));
+    ;
+  }
+
+  62%,
+  100% {
+    background: green;
+  }
+
+}
+
+.answer.wrong{
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+
+  0%,
+  22%,
+  42% {
+    background: mediumblue;
+  }
+
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(rgb(51, 52, 71), rgb(174, 0, 255));
+    ;
+  }
+
+  62%,
+  100% {
+    background: rgb(207, 44, 44);
+  }
+
+}
+
+.bottom {
+  height: 50%;
+}
+
+.pyramid {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moneyList {
+  width: 100%;
+  list-style: none;
+  padding: 20px;
+
+}
+
+.moneyListItem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.moneyListItem.active {
+  background-color: #10b2b8;
+
+}
+
+.moneyListItemNumber {
+  font-size: 18px;
+
+  font-weight: 100;
+  width: 30%;
+}
+
+.moneyListItemAmount {
+  font-size: 20px;
+  font-weight: 300;
+
+}
+
+.endText{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+}
+.start{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+  
+  height: 70px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.startInput{
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+
+
+}
+.startInput :focus{
+  outline: none;
+}
+
+.startButton{
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
